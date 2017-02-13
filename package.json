@@ -1,0 +1,26 @@
+{
+  "name": "trackpin-node",
+  "version": "0.2.0",
+  "description": "TrackPin Garage door information scraper",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "develop": "nodemon lib/index.js --exec babel-node",
+    "test": "eslint ./lib",
+    "build": "babel lib -d dist",
+    "prepublish": "npm run build"
+  },
+  "author": "Jim Karg",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-env": "^1.1.8",
+    "eslint": "^3.14.1",
+    "nodemon": "^1.11.0"
+  }
+}
