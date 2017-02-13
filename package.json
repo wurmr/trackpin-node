@@ -10,6 +10,10 @@
     "build": "babel lib -d dist",
     "prepublish": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wurmr/trackpin-node.git"
+  },
   "author": "Jim Karg",
   "license": "MIT",
   "dependencies": {
