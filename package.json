@@ -11,7 +11,8 @@
     "lint": "standard",
     "preversion": "npm run lint",
     "version": "npm run build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "dev": "chokidar './lib/**/*.js' -c 'npm run build'"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-preset-env": "^1.1.8",
+    "chokidar-cli": "^1.2.0",
     "nodemon": "^1.11.0",
     "precommit-hook": "^3.0.0",
     "standard": "^8.6.0"
