@@ -8,20 +8,27 @@ This system does not provide the ability to trigger the garage door remotely so 
 ### Installation / Usage
 `$ npm install trackpin-node`
 
-Currently now the plugin only exports `checkDoorStatus`.
+Currently this exports `checkDoorStatus` and `listPins`.
 
 Example usage:
 ```js
-import {checkDoorStatus} from 'trackpin-node'
+import {checkDoorStatus, listPins} from 'trackpin-node'
 
 const credentials = {
     email: 'email',
     password: 'password'
 }
 
+// To get door status
 checkDoorStatus(credentials).then(result => {
-    // result will either be OPEN or CLOSED
-    console.log(result) 
+    // result is an object with status and lastPin
+    // { status: 'OPEN' or 'CLOSED', lastPin: 'last used pin code' } 
+    console.log(result)
+})
+
+// To get a list of pin names in the system (not the code itself)
+listPins(credentials).then(r => {
+  console.log(r) // -> ['pin1', 'pin2', ...]
 })
 ```
 
