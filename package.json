@@ -6,9 +6,12 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "develop": "nodemon lib/index.js --exec babel-node",
-    "test": "eslint ./lib",
     "build": "babel lib -d dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "lint": "standard",
+    "preversion": "npm run lint",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,11 @@
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-preset-env": "^1.1.8",
-    "eslint": "^3.14.1",
-    "nodemon": "^1.11.0"
-  }
+    "nodemon": "^1.11.0",
+    "precommit-hook": "^3.0.0",
+    "standard": "^8.6.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
