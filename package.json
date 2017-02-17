@@ -1,6 +1,6 @@
 {
   "name": "trackpin-node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TrackPin Garage door information scraper",
   "main": "./dist/index.js",
   "scripts": {
