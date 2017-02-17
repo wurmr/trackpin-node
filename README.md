@@ -1,6 +1,13 @@
 # trackpin-node
 ### TrackPin Garage door information scraper
 
+[![npm version](https://badge.fury.io/js/trackpin-node.svg)](https://badge.fury.io/js/trackpin-node)
+[![Build Status](https://travis-ci.org/wurmr/trackpin-node.svg?branch=master)](https://travis-ci.org/wurmr/trackpin-node)
+[![dependencies Status](https://david-dm.org/wurmr/trackpin-node/status.svg)](https://david-dm.org/wurmr/trackpin-node)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
+
+
 This module is designed to get status from the TrackPin (http://trackpin.com/) garage door opener system.
 
 This system does not provide the ability to trigger the garage door remotely so this plugin is only designed to get the status of the garage door.
@@ -31,5 +38,3 @@ listPins(credentials).then(r => {
   console.log(r) // -> ['pin1', 'pin2', ...]
 })
 ```
-
-[![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
